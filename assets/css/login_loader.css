@@ -1,0 +1,141 @@
+
+/* DVD: Splash Screen */
+.splash-limiter {
+	position: fixed;
+	z-index: 10000;
+	/*z-index: 9999999;*/
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container-splash {
+	width: 100%;
+	min-height: 100vh;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	/* padding: 15px; */
+	background: linear-gradient(150deg, #5ac3ff 15%, #8f6ed5 70%, #d782d9 94%);
+	transition: background 1.5s ease-in-out;
+}
+
+
+.splash-mid {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+.splash-mid img {
+	max-width: 200px
+}
+
+/* warna disesuaikan nama animasinya */
+.ball-beat>div {
+	background-color: #5ac3ff;
+	width: 15px;
+	height: 15px;
+	border-radius: 100%;
+	margin: 2px;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	display: inline-block;
+	-webkit-animation: ball-beat 0.7s 0s infinite linear;
+	animation: ball-beat 0.7s 0s infinite linear;
+}
+
+
+.ball-beat>div:nth-child(2n-1) {
+	-webkit-animation-delay: -0.35s !important;
+	animation-delay: -0.35s !important;
+}
+
+/* @-webkit-keyframes ball-beat {
+	50% {
+		opacity: 0.2;
+		-webkit-transform: scale(0.75);
+		transform: scale(0.75);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+} */
+
+@keyframes ball-beat {
+	50% {
+		opacity: 0.2;
+		-webkit-transform: scale(0.75);
+		transform: scale(0.75);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+
+.loader-text{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	visibility: hidden;
+	transform: translateY(10px);
+	transition: 1.5s ease-in-out;
+}
+
+body.ready .loader-text{
+	visibility: visible;
+	animation-duration: 1.5s;
+	transition: all 1.5s ease-in-out;
+	transform: translateY(0);
+	transition: 1.5s ease-in-out;
+
+}
+
+.inline-loader.ball-beat {
+	display: inline-block;
+	transition: all 1.5s ease-in-out;
+}
+
+body.ready .ball-beat {
+	animation: ball-beat-ready;
+	animation-duration: 1.5s;
+	transition: all 1.5s ease-in-out;
+	display: none;
+}
+
+body.ready .container-splash{
+	animation-duration: 1.5s;
+	transition: background 1.5s ease-in-out;
+	background: none;
+
+}
+
+@keyframes ball-beat-ready {
+	
+	0% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	
+
+	100% {
+		transform: translateY(20px);
+		opacity: 0;
+		display: none;
+	}
+}
+

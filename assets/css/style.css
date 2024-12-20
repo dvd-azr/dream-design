@@ -1,0 +1,93 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	font-family: "Open Sans", Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+h4,
+.h4 {
+  font-size: 1.125em;
+ 
+}
+p,
+h1,
+.h2 ,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+p,
+small,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: inherit;
+  font-weight: normal;
+  line-height: 1.1;
+  color: white;
+  /* color: inherit; */
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+a:hover{
+    color: #f7da2a;
+}
+
+/*  */
+#rainy_day_canvas {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    min-height: 640px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  #rainy_day_canvas img {
+    width: 100%;
+  }
+
+  /*  */
+  .stripes {
+    width: 250px;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(247, 218, 42, 0.8) 10px,
+      rgba(247, 218, 42, 0.8) 20px
+    );
+    height: 18px;
+  }
+
+  /*    iPad and mini pc 1200px+. */
+  @media only screen and (max-width: 1390px) {
+    canvas {
+      height: 100%;
+    }
+  }

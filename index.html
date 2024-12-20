@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/assets/js/meta-tag.js"></script>
+
+    <link rel="icon" type="image/png" href="/assets/img/logo/dd-id.png" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/login_loader.css" />
+    <script type="text/javascript" src="/assets/js/rainyday.min.js"></script>
+  </head>
+
+  <body class="body" onload="run();">
+    <!-- Splash Screen -->
+    <div id="rainy_day_canvas">
+      <img id="background" alt="background" src="" />
+    </div>
+    <div id="splash" class="splash-limiter">
+      <div class="container-splash">
+        <div class="splash-mid">
+          <img
+            src="/assets/img/logo/dd-id.png"
+            draggable="false"
+            alt="spalsh-logo-id"
+          />
+
+          <!-- Loader -->
+          <div class="loader-inner ball-beat">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <!-- End Loader -->
+          <div class="loader-text">
+            <h1>Under Maintenance</h1>
+            <div class="stripes"></div>
+            <h4>We Should be back shortly</h4>
+            <a href="https://wa.me/6285159950330" target="_blank">
+              +62 851-5995-0330
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Splash Screen -->
+    <!-- <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></s> -->
+    <script>
+      let canvas, image, background;
+      const body = document.getElementsByTagName("body");
+      function run() {
+        image = document.getElementById("background");
+        canvas = document.getElementById("rainy_day_canvas");
+        background = document.querySelector(".container-splash");
+
+        const loader = document.querySelector(".ball-beat");
+        image.onload = function () {
+          body[0].classList.add("ready");
+          var engine = new RainyDay({
+            image: this,
+            parentElement: canvas,
+            blur: 6,
+          });
+          engine.rain(
+            [
+              [0, 2, 200],
+              [3, 3, 1],
+            ],
+            500 // time in milliseconds
+          );
+          console.log((engine.options.width = 3000));
+        };
+        // image.crossOrigin = "anonymous";
+        image.src = "/assets/img/bg/england.avif";
+      }
+      window.onresize = function () {};
+    </script>
+  </body>
+</html>

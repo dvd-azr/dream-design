@@ -1,0 +1,50 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+/* DVD: Splash Screen */
+.splash-limiter {
+	position: fixed;
+	z-index: 10000;
+	/*z-index: 9999999;*/
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container-splash {
+	width: 100%;
+	min-height: 100vh;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background: #202020;
+	/* padding: 15px; */
+	/*opacity: 0.8;*/
+	/* background: #75c1ff;   */
+}
+
+.wrap-splash {
+	/* width: 390px; */
+	width: 100%;
+	/* padding: 33px 55px; */
+
+}
+
+.splash-mid {
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.splash-mid img {
+	max-width: 200px
+}
