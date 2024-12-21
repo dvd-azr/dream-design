@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
+
 sitemap: https://dreamdesign.asia/sitemap.xml
