@@ -5,6 +5,7 @@ body {
 
 	font-family: "Open Sans", Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
+  user-select: none;
 }
 
 
@@ -74,18 +75,21 @@ a:hover{
 
   /*  */
   .stripes {
-    /* width: 250px; */
-    width: 85%;
+    /* (28 * 9) - (28 /2 ) = 238 */
+    width: 238px;
+    /* width: 85%; */
     background: repeating-linear-gradient(
-      45deg,
-      transparent,
+      /* 45deg, */
+      90deg,
+      transparent ,
       transparent 10px,
       rgba(247, 218, 42, 1) 10px,
-      rgba(247, 218, 42, 1) 20px
+      rgba(247, 218, 42, 1) 24px
     );
     height: 20px;
-    background-size: 28px 28px;
-    animation: progress-bar-stripes 3s linear infinite ;
+    background-size: 28px 28px; 
+    animation: progress-bar-stripes 2.5s linear infinite ;
+    transform: skewX(45deg);
   }
   
   
