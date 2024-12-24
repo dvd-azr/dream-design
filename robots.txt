@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-sitemap: https://dreamdesign.asia/sitemap.xml
+sitemap: https://www.dreamdesign.asia/sitemap.xml
